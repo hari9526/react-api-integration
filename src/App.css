@@ -31,11 +31,15 @@
 }
 
 input{
-  height: 30px;
+  height: 40px;
   width: 340px;
   border-radius: 10px;
   font-size: 20px;
   text-align: center;
+  background-color: rgb(57, 57, 57);
+  color: white; 
+  border: 0px; 
+
 }
 
 p{

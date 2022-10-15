@@ -62,14 +62,22 @@ function App() {
   //   </div>
   // );
 
+  const [name, setName] = useState(''); 
+  const [age, setAge] = useState(0); 
 
-  //POST Method
+
+  //GET Method with a parameter
+  const fetchData = () => {
+    axios.get(`https://api.agify.io/?name=${name}`)
+         .then(res => setAge(res.data.age)); 
+  }
+
 
   return (
     <div className='App'>
-      <input placeholder='Enter your name' />
-      <button className='button-age'>Predict your age</button>
-      <p> Your predicted age is: </p>
+      <input placeholder='Enter your name' onChange={event => setName(event.target.value)}/>
+      <button className='button-age' onClick={fetchData}>Predict your age</button>
+      <p> Your predicted age is: {age}</p>
     </div>
   ); 
 
