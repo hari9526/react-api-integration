@@ -4,13 +4,15 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function App() {
-  //state
-  //This is a way to “preserve” some values between the function calls. 
-  //Normally, variables “disappear” when the function exits but state variables are preserved by React.
-  //The only argument to the useState() Hook is the initial state.
-  //It returns a pair of values: the current state and a function that updates it. 
-  //This is why we write const [count, setCount] = useState().
-  //Also, whenever the value of state changes the component will be re rendered and thus we can show new data will shown in the JSX. 
+
+  // GET call
+  // state
+  // This is a way to “preserve” some values between the function calls. 
+  // Normally, variables “disappear” when the function exits but state variables are preserved by React.
+  // The only argument to the useState() Hook is the initial state.
+  // It returns a pair of values: the current state and a function that updates it. 
+  // This is why we write const [count, setCount] = useState().
+  // Also, whenever the value of state changes the component will be re rendered and thus we can show new data will shown in the JSX. 
 
   const[quote, setQuote] = useState('Initial'); 
   //Normal variable. 
@@ -52,11 +54,25 @@ function App() {
 
   return (
     <div className='App'>
-      <button className='button-quote' onClick={getQuote}>Get Quote</button>
-      <p>{quote}</p>
-      <p>{test}</p>
+      <h6>Quote App</h6>
+      <p>"{quote}"</p>
+      {/* <p>{test}</p> */}
+      <button className='button-quote' onClick={getQuote}>Another Quote</button>
+     
     </div>
   );
+
+
+  //POST Method
+
+  // return (
+  //   <div className='App'>
+  //     <input placeholder='Enter your name' />
+  //     <button className='button-age'>Predict your age</button>
+  //     <p> Your predicted age is: </p>
+  //   </div>
+  // ); 
+
 }
 
 export default App;

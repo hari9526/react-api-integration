@@ -7,11 +7,40 @@
   justify-content: center;
   flex-direction: column;
   color: grey; 
+  font-size: 40px;
+  gap: 10px; 
 }
 
 
 .button-quote {
-  height: 50px;
-  width: 100px;
+  height: 30px;
+  width: 250px;
   border-radius: 10px;
+  font-size: 20px;
+  color: rgb(85, 85, 237); 
+  background-color: black;
+}
+
+.button-age{
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: rgb(85, 85, 237); 
+  background-color: black;
+}
+
+input{
+  height: 30px;
+  width: 340px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+p{
+  font-size: 30px; 
+  font-style: italic;
+  width: 80vw; 
+  text-align: center;
 }
